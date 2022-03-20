@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;  
+    box-sizing: border-box;
+}
+
+
+
+.container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(-60deg,#0652DD,#EA2027); 
+
+}
+
+.calendar{
+    max-width: 1000px;
+    width: 100%;
+   
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+   
+    gap:10px;
+   
+}
+
+.calendar__clock,.calendar__frame,.calendar__events{
+    
+    background: #fff;
+    box-shadow: 0 4px 5px #2224;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+
+
+.calendar__clock,.calendar__events{
+    flex-grow: 1;
+    flex-basis: 250px;
+}
+
+.calendar__frame .header{
+    padding: 10px;
+    position: relative;
+    border-bottom: 1px solid #eee;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.carousel{
+    cursor: pointer;
+   
+}
+
+.weekdays,.dates{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    padding: 10px;
+
+   
+}
+.weekday,.month-date{
+    text-align: center;
+    height:50px;
+    line-height: 50px;
+    display: inline-block;
+}
+
+.active--week{
+  position: relative;  
+    
+}
+.active--week::after{
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 100%;
+    left:0;
+    bottom: 0;
+    background: linear-gradient(90deg,#0652DD,#EA2027,#20bf6b);
+}
+.month-active-date{
+    
+    background:#7d5fff;
+    color: #fff;
+}
+
+.weekend{
+    background:#20bf6b; 
+    color: #fff;
+}
+
+.year{
+    font-size: 2rem;
+}
+
+.month{
+    color: #000;
+    font-size: 1.2rem;
+   
+}
+.calendar__clock{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    
+    
+    }
+
+.clock{
+    height:200px;
+    width:200px;
+    border-radius: 50%;
+    box-shadow: 0 4px 5px #ccc4, 0 -4px 5px #ccc4;
+    border:  10px solid #fff;
+    position: relative;
+    background: #eee;
+    margin: 10px 0;
+}
+
+.clock-image{
+  height: 100%;
+  width: 100%;
+}
+
+.hour{
+    height: 25px; width:3px;
+    position: absolute;
+    top:calc(50% - 25px);
+    left:calc(50% - 1.5px);
+    background: #EA2027;
+    border-radius: 3px 3px 0 0;
+    transform-origin:  bottom ;
+
+}
+.minute{
+    height: 50px; width:2px;
+    position: absolute;
+    top:calc(50% - 50px);
+    left:calc(50% - 1px);
+    background: green;
+    border-radius: 2px 2px 0 0;
+    transform-origin:  bottom;
+
+}
+
+.second{
+    height: 60px; width:1px;
+    position: absolute;
+    top:calc(50% - 60px);
+    left:calc(50% - 0.5px);
+    background:#111;
+    border-radius: 1px 1px 0 0;
+    transform-origin:  bottom;
+
+}
+.circle{
+    height: 8px;
+    width: 8px;
+    background: #fff;
+    position: absolute;
+    top:calc(50% - 4px);
+    left:calc(50% - 4px);
+    border-radius: 50%;
+    box-shadow: 0 2px 3px #0004;
+}
+
+.calendar__clock p{
+    margin: 10px 0;
+}
+
